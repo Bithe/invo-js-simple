@@ -64,6 +64,13 @@ function totalCalculation() {
     const subTotalToDisplay = document.getElementById('sub-total');
     subTotalToDisplay.innerText = subTotal;
     console.log(subTotal);
+
+    //Tax
+    const tax = subTotal * 0.2;
+    document.getElementById('tax').innerText = tax;
+
+    const grandTotal = document.getElementById("grand-total").innerText = subTotal + tax;
+    document.getElementById("grand-total-2").innerText = grandTotal;
 }
 
 //
