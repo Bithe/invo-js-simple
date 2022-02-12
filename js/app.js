@@ -72,8 +72,9 @@ function totalCalculation() {
     const grandTotal = document.getElementById("grand-total").innerText = subTotal + tax;
     document.getElementById("grand-total-2").innerText = grandTotal;
 }
-
 //
+
+// Calculation For Sub Total
 function calculateSubTotal() {
     let subTotal = 0;
     const total = document.getElementsByClassName('item-total');
