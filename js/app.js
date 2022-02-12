@@ -54,3 +54,8 @@ addProductButton.addEventListener("click", function() {
     tr.appendChild(td3);
     infoTable.appendChild(tr);
 });
+
+
+function subTotal() {
+    const total = document.getElementById('')
+}
