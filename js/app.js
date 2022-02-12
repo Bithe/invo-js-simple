@@ -55,11 +55,18 @@ addProductButton.addEventListener("click", function() {
     tr.appendChild(td2);
     tr.appendChild(td3);
     infoTable.appendChild(tr);
-
-    calculateSubTotal();
+    totalCalculation();
 });
 
+//
+function totalCalculation() {
+    const subTotal = calculateSubTotal();
+    const subTotalToDisplay = document.getElementById('sub-total');
+    subTotalToDisplay.innerText = subTotal;
+    console.log(subTotal);
+}
 
+//
 function calculateSubTotal() {
     let subTotal = 0;
     const total = document.getElementsByClassName('item-total');
