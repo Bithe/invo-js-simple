@@ -58,7 +58,7 @@ addProductButton.addEventListener("click", function() {
     totalCalculation();
 });
 
-//
+// Recall sub total function, Tax calculation, & show on subtotal, grand total
 function totalCalculation() {
     const subTotal = calculateSubTotal();
     const subTotalToDisplay = document.getElementById('sub-total');
