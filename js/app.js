@@ -40,6 +40,8 @@ addProductButton.addEventListener("click", function() {
     const td1 = document.createElement('td');
     const td2 = document.createElement('td');
     const td3 = document.createElement('td');
+    //add class dynamically
+    td3.classList.add('item-total');
 
     //initiate the values from input tags
     th.innerText = itemName.value;
@@ -53,9 +55,19 @@ addProductButton.addEventListener("click", function() {
     tr.appendChild(td2);
     tr.appendChild(td3);
     infoTable.appendChild(tr);
+
+    calculateSubTotal();
 });
 
 
-function subTotal() {
-    const total = document.getElementById('')
+function calculateSubTotal() {
+    let subTotal = 0;
+    const total = document.getElementsByClassName('item-total');
+    for (i = 0; i < total.length; i++) {
+        const element = total[i];
+        const price = parseInt(element.innerText);
+        subTotal = subTotal + price;
+        console.log(subTotal);
+    }
+    return subTotal;
 }
